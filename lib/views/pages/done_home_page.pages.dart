@@ -6,7 +6,7 @@ class DoneHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(75.0),
+        preferredSize: Size.fromHeight(70.0),
         child: AppBar(
           title: Text(
             'Done',
@@ -21,6 +21,14 @@ class DoneHomePage extends StatelessWidget {
       ),
       body: Container(
         child: GridViewHome(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.settings,
+          size: 30,
+        ),
+        tooltip: 'Configurações',
       ),
     );
   }
