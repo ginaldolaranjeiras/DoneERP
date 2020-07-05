@@ -1,3 +1,4 @@
+import 'package:done/views/components/button/register.button.dart';
 import 'package:flutter/material.dart';
 
 class StakeholderEmpty extends StatelessWidget {
@@ -17,17 +18,7 @@ class StakeholderEmpty extends StatelessWidget {
             textScaleFactor: 2,
           ),
         ),
-        Padding(
-          padding: EdgeInsets.all(20),
-          child: IconButton(
-            icon: Icon(Icons.add_circle),
-            onPressed: () {
-              Navigator.pushNamed(context, '/registerstakeholder');
-            },
-            iconSize: 50,
-            alignment: Alignment.center,
-          ),
-        ),
+        RegisterButton(),
       ],
     );
   }
