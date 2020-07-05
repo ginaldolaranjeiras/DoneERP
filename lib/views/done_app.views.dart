@@ -1,3 +1,4 @@
+import 'package:done/views/pages/done_show_stakeholder_details.pages.dart';
 import 'package:flutter/material.dart';
 import 'package:done/views/theme/done_theme.theme.dart';
 import 'package:done/views/pages/done_home_page.pages.dart';
@@ -18,6 +19,7 @@ class Done extends StatelessWidget {
         '/sales': (context) => SalesPage(),
         '/crm': (context) => CRMPage(),
         '/registerstakeholder': (context) => RegisterStakeholderPage(),
+        '/viewstakeholder': (context) => ShowStakeholderPage(),
       },
     );
   }

@@ -1,3 +1,6 @@
+import 'package:done/data/stakeholder_list.data.dart';
+import 'package:done/views/components/group/stakeholder_empty.goup.dart';
+import 'package:done/views/components/lists/done_stakeholder.lists.dart';
 import 'package:flutter/material.dart';
 
 class CRMPage extends StatelessWidget {
@@ -12,29 +15,9 @@ class CRMPage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Text(
-                    'Nenhum stakeholder cadastrado. \n Começe adicionando algum.',
-                    textAlign: TextAlign.center,
-                    textScaleFactor: 2,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: IconButton(
-                    icon: Icon(Icons.add_circle),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/registerstakeholder');
-                    },
-                    iconSize: 50,
-                    alignment: Alignment.center,
-                  ),
-                ),
-              ],
-            ),
+            child: stakeholderDataList.isEmpty
+                ? StakeholderEmpty()
+                : StakeholdersList(),
           ),
         ));
   }
